@@ -5,8 +5,11 @@ const axios = require("axios");
 const app = express();
 app.use("/public", express.static("public"));
 
+// param
 const url = "https://www.yuanfudao.com";
 const limitCount = 3;
+// param end
+
 let requestCount = 0;
 
 const asyncPool = async (poolLimit, iteratorFn, param) => {
